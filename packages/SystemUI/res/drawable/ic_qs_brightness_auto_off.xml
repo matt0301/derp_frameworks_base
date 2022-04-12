@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2014 The Android Open Source Project
-
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
           http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,6 +22,6 @@
       android:fillColor="#00000000"
       android:strokeColor="?android:attr/textColorPrimary"/>
   <path
-      android:pathData="M34.1602,34.5267H25.3867L23.7706,39H21L28.2727,19H31.303L38.5469,39H35.7763L34.1602,34.5267ZM33.4098,32.3911L29.7735,22.2323L26.1371,32.3911H33.4098Z"
+      android:pathData="M24.8105,21.2266L29.9375,34.8496L35.0522,21.2266H39.0439V39H35.9678V33.1406L36.2729,25.3037L31.0239,39H28.8145L23.5776,25.3159L23.8828,33.1406V39H20.8066V21.2266H24.8105Z"
       android:fillColor="?android:attr/textColorPrimary"/>
 </vector>
