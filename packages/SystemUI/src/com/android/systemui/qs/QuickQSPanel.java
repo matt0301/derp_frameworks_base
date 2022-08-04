@@ -41,10 +41,12 @@ public class QuickQSPanel extends QSPanel implements TunerService.Tunable {
 
     private boolean mDisabledByPolicy;
     private int mMaxTiles;
+    private int mMaxColumns;
 
     public QuickQSPanel(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mMaxTiles = getResources().getInteger(R.integer.quick_qs_panel_max_tiles);
+        mMaxTiles = getResources().getInteger(R.integer.kscope_quick_qs_panel_max_tiles);
+        mMaxColumns = getResources().getInteger(R.integer.kscope_quick_qs_panel_max_columns);
     }
 
     @Override
@@ -87,6 +89,7 @@ public class QuickQSPanel extends QSPanel implements TunerService.Tunable {
         if (mHorizontalContentContainer != null) {
             mHorizontalContentContainer.setClipChildren(false);
         }
+        updateColumns();
     }
 
     @Override
@@ -132,6 +135,10 @@ public class QuickQSPanel extends QSPanel implements TunerService.Tunable {
             state = copy;
         }
         super.drawTile(r, state);
+    }
+
+    public void updateColumns() {
+        mTileLayout.setMaxColumns(mMaxColumns);
     }
 
     public void setMaxTiles(int maxTiles) {
@@ -250,7 +257,7 @@ public class QuickQSPanel extends QSPanel implements TunerService.Tunable {
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,
                     LayoutParams.WRAP_CONTENT);
             setLayoutParams(lp);
-            setMaxColumns(4);
+            setMaxColumns(5);
         }
 
         @Override
